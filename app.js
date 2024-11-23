@@ -27,11 +27,13 @@ async function getApi(locationValue) {
     console.log(weatherData);
 
     result.classList.remove("hidden");
-
     locationName.innerText = `location: ${weatherData.name}, ${weatherData.sys.country}`;
-
     temp.innerText = `Temp: ${weatherData.main.temp} C, feels like: ${weatherData.main.feels_like}`;
     weatherDesc.innerText = `${weatherData.weather[0].description}`;
+
+    // reset location input value
+    locationInput.value = "";
+    
   } catch (error) {
     alert("An error has occured. Please try again");
     console.log(error);
