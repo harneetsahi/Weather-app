@@ -21,6 +21,7 @@ async function getApi(locationValue) {
 
     if (weatherData.cod !== 200) {
       alert("Location not found");
+      return;
     }
 
     console.log(weatherData);
