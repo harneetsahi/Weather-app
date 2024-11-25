@@ -44,7 +44,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const locationValue = locationInput.value;
-  console.log(locationValue);
+  
 
   getApi(locationValue);
 });
